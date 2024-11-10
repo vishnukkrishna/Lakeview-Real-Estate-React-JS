@@ -8,31 +8,31 @@ const Header = () => {
       style={{ backgroundImage: "url('/header_img.jpg')" }}
       id="Header"
     >
-      <div className="absolute inset-0 bg-gray-900 opacity-60"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-black to-transparent opacity-30"></div>
       {/* Navbar */}
       <Navbar />
 
       {/* Header Content */}
-      <div className="container text-center mx-auto relative z-10 py-4 px-6 md:px-20 lg:px-32 text-white">
-        <h2 className="text-4xl sm:text-5xl md:text-[82px] max-w-3xl mx-auto font-semibold pt-20 tracking-wide leading-tight">
+      <div className="container text-center mx-auto py-4 px-6 md:px20 lg:px-32 text-white">
+        <h2 className="text-5xl sm:text-6xl md:text-[82px] inline-block max-w-3xl font-semibold pt-20">
           Explore Homes That Fit Your Dreams
         </h2>
 
-        <p className="mt-4 text-lg sm:text-xl md:text-2xl max-w-2xl mx-auto text-gray-300">
+        <p className="text-xl sm:text-3xl md:text-[28px] inline-block max-w-2xl font-medium pt-4">
           Discover properties crafted with passion, tailored to meet your
           lifestyle and aspirations.
         </p>
 
-        <div className="space-x-6 mt-12">
+        <div className="space-x-6 mt-10">
           <a
             href="#Projects"
-            className="border border-white px-8 py-3 rounded-full text-white font-medium transition duration-300 hover:bg-white hover:text-gray-800"
+            className="inline-block px-8 py-3 rounded-full border border-white text-white font-medium transition duration-300 transform hover:bg-white hover:text-gray-800 hover:scale-105 shadow-lg hover:shadow-2xl"
           >
             Projects
           </a>
           <a
             href="#Contact"
-            className="bg-blue-600 px-8 py-3 rounded-full text-white font-medium transition duration-300 hover:bg-blue-700"
+            className="inline-block px-8 py-3 rounded-full bg-blue-800 text-white font-medium transition duration-300 transform hover:bg-blue-600 hover:scale-105 shadow-lg hover:shadow-2xl"
           >
             Contact Us
           </a>
