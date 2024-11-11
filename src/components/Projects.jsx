@@ -91,7 +91,7 @@ const Projects = () => {
                   className="w-full h-60 object-cover transition duration-500 transform group-hover:scale-110"
                 />
                 {/* Overlay Text on Hover */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center text-white text-center">
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center text-white text-center">
                   <div>
                     <h2 className="text-xl font-semibold">{project.title}</h2>
                     <p className="text-gray-300 text-sm">{project.location}</p>
@@ -111,8 +111,8 @@ const Projects = () => {
               onClick={() => setCurrentIndex(idx)}
               className={`w-4 h-4 rounded-full cursor-pointer transition-all duration-300 transform ${
                 idx === currentIndex
-                  ? "bg-blue-600 scale-125 shadow-lg"
-                  : "bg-gray-300 hover:bg-blue-500"
+                  ? "bg-blue-800 scale-125 shadow-lg"
+                  : "bg-gray-300 hover:bg-blue-800"
               }`}
             ></span>
           ))}
