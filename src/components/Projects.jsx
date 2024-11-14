@@ -92,7 +92,7 @@ const Projects = () => {
           Completed
         </span>
       </h1>
-      <p className="text-center text-gray-500 mb-3 max-w-80 mx-auto">
+      <p className="text-center text-gray-500 mb-10 max-w-lg mx-auto">
         Crafting Spaces, Building Legacies - Explore Our Portfolio
       </p>
       <div

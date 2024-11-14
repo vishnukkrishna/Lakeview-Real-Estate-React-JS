@@ -13,7 +13,7 @@ const About = () => {
           Our Brand
         </span>
       </h1>
-      <p className="text-gray-500 max-w-80 text-center mb-8">
+      <p className="text-center text-gray-500 mb-10 max-w-lg mx-auto">
         Passionate About Properties, Dedicated to Your Vision
       </p>
       <div className="flex flex-col md:flex-row items-center md:items-start md:gap-20">
