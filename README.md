@@ -15,7 +15,6 @@ Lakeview Real Estate is a modern real estate website built with **React** and po
 
 - **React**: A JavaScript library for building user interfaces.
 - **Vite**: A next-generation build tool for faster and more efficient React development.
-- **React Router**: For navigation and page routing within the app.
 - **Tailwind CSS**: A utility-first CSS framework for easy styling.
 - **Framer Motion**: For smooth animations in the UI.
 - **React Toastify**: For showing notifications.
@@ -62,5 +61,5 @@ To securely store and access environment variables (such as API keys) in your pr
 Example `.env`:
 
 ```env
-VITE_API_KEY=your-api-key-here
+VITE_REACT_API_KEY=your-api-key-here
 ```
