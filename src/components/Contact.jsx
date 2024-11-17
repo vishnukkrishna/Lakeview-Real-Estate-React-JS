@@ -1,6 +1,33 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Contact = () => {
+  const [result, setResult] = useState("");
+
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    setResult("Sending....");
+    const formData = new FormData(event.target);
+
+    formData.append("access_key", "f72fcc92-e63e-4c95-a743-392afbd65cfe");
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData,
+    });
+
+    const data = await response.json();
+
+    if (data.success) {
+      setResult("");
+      alert("Form Submitted Successfully");
+      event.target.reset();
+    } else {
+      console.log("Error", data);
+      alert(data, message);
+      setResult("");
+    }
+  };
+
   return (
     <div
       className="text-center p-6 py-20 lg:px-32 w-full overflow-hidden"
@@ -15,7 +42,10 @@ const Contact = () => {
       <p className="text-center text-gray-500 mb-10 max-w-lg mx-auto">
         Ready to Make a Move? Let's Build Future Together
       </p>
-      <form className="max-w-2xl mx-auto text-gray-600 pt-4">
+      <form
+        onSubmit={onSubmit}
+        className="max-w-2xl mx-auto text-gray-600 pt-4"
+      >
         <div className="flex flex-wrap">
           <div className="w-full md:w-1/2 text-left text-sm font-medium">
             Your Name
@@ -47,8 +77,11 @@ const Contact = () => {
             required
           ></textarea>
         </div>
-        <button className="bg-blue-800 text-white py-2 px-12 mb-10 rounded from-blue-800 to-indigo-800 shadow-lg hover:scale-105 transition-transform duration-300">
-          Send Message
+        <button
+          type="submit"
+          className="bg-blue-800 text-white py-2 px-12 mb-10 rounded from-blue-800 to-indigo-800 shadow-lg hover:scale-105 transition-transform duration-300"
+        >
+          {result ? result : "Send Message"}
         </button>
       </form>
     </div>
