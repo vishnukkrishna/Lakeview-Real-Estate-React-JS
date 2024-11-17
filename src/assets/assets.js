@@ -1,5 +1,5 @@
 import logo from "./logo.png";
-import logo_dark from "./logo_dark.svg";
+import logo_black from "./logo_black.png";
 import cross_icon from "./cross_icon.svg";
 import menu_icon from "./menu_icon.svg";
 import star_icon from "./star_icon.svg";
@@ -19,7 +19,7 @@ import profile_img_3 from "./profile_img_3.png";
 
 export const assets = {
   logo,
-  logo_dark,
+  logo_black,
   cross_icon,
   menu_icon,
   star_icon,
