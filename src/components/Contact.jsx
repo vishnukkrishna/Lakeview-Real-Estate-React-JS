@@ -8,24 +8,31 @@ const Contact = () => {
   const onSubmit = async (event) => {
     event.preventDefault();
     setResult("Sending....");
+
     const formData = new FormData(event.target);
 
-    formData.append("access_key", "f72fcc92-e63e-4c95-a743-392afbd65cfe");
+    formData.append("access_key", import.meta.env.VITE_REACT_API_KEY);
 
-    const response = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      body: formData,
-    });
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
 
-    const data = await response.json();
+      const data = await response.json();
 
-    if (data.success) {
-      setResult("");
-      toast.success("Form Submitted Successfully ");
-      event.target.reset();
-    } else {
-      console.log("Error", data);
-      toast.error(data, message);
+      if (data.success) {
+        setResult("");
+        toast.success("Form Submitted Successfully ");
+        event.target.reset();
+      } else {
+        console.log("Error", data);
+        toast.error(data.message); // Correct error message handling
+        setResult("");
+      }
+    } catch (error) {
+      console.error("Error during form submission:", error);
+      toast.error("An error occurred during submission.");
       setResult("");
     }
   };
