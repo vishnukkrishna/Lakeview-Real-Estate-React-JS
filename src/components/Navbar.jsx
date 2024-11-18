@@ -117,7 +117,7 @@ const Navbar = () => {
           <motion.img
             onClick={() => setShowMobileMenu(false)}
             src={assets.cross_icon}
-            className="w-6"
+            className="w-8 border-2 border-black rounded-full"
             alt="Close Icon"
             whileHover={{ scale: 1.2, rotate: 360 }}
             transition={{ duration: 0.5 }}
