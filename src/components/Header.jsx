@@ -7,6 +7,7 @@ import headerImage from "../assets/header_img.jpg";
 const Header = () => {
   return (
     <header
+      id="Home"
       className="relative flex items-center justify-center min-h-screen bg-cover bg-center w-full overflow-hidden"
       style={{
         backgroundImage: `url(${headerImage})`,

@@ -108,8 +108,8 @@ const Navbar = () => {
       />
 
       <motion.div
-        className={`md:hidden fixed top-0 right-0 bottom-0 w-2/3 bg-gray-200 overflow-hidden rounded-l-3xl`}
-        initial={{ x: "100%" }} // Motion property for animation
+        className={`md:hidden fixed top-0 right-0 bottom-0 w-2/3 bg-gray-100 overflow-hidden rounded-l-3xl`}
+        initial={{ x: "100%" }}
         animate={{ x: showMobileMenu ? "0" : "100%" }}
         transition={{ type: "spring", stiffness: 300, damping: 30 }}
       >
