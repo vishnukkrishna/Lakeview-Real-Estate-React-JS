@@ -1,51 +1,108 @@
 import React from "react";
 import Navbar from "./Navbar";
 import { motion } from "framer-motion";
+import { FaHome, FaCity, FaSmile } from "react-icons/fa";
+import headerImage from "../assets/header_img.jpg";
 
 const Header = () => {
   return (
-    <div
-      className="relative min-h-screen mb-4 bg-cover bg-center flex items-center w-full overflow-hidden"
-      style={{ backgroundImage: "url('/header_img.jpg')" }}
-      id="Header"
+    <header
+      className="relative flex items-center justify-center min-h-screen bg-cover bg-center w-full overflow-hidden"
+      style={{
+        backgroundImage: `url(${headerImage})`,
+      }}
     >
-      <div className="absolute inset-0 bg-gradient-to-r from-black to-transparent opacity-20"></div>
+      <div className="absolute top-0 left-0 right-0 bottom-0 bg-gradient-to-t from-black to-transparent opacity-60"></div>
+
       {/* Navbar */}
       <Navbar />
 
       {/* Header Content */}
       <motion.div
-        initial={{ opacity: 0, y: 100 }}
-        transition={{ duration: 1.5 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        className="container text-center mx-auto py-4 px-6 md:px20 lg:px-32 text-white"
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, ease: "easeOut" }}
+        className="text-center max-w-4xl px-6 text-white relative"
       >
-        <h2 className="text-5xl sm:text-6xl md:text-[82px] inline-block max-w-3xl font-semibold pt-20">
-          Explore Homes That Fit Your Dreams
+        <h1 className="text-4xl md:text-6xl font-extrabold leading-tight tracking-wide text-white  bg-clip-padding p-2">
+          Find Your Perfect Home
+        </h1>
+
+        <h2 className="mt-2 text-xl md:text-2xl font-semibold text-white">
+          Discover Luxury, Comfort, and Modern Design
         </h2>
 
-        <p className="text-xl sm:text-3xl md:text-[28px] inline-block max-w-2xl font-medium pt-4">
-          Discover properties crafted with passion, tailored to meet your
-          lifestyle and aspirations.
-        </p>
+        <div className="grid grid-cols-3 sm:grid-cols-3 gap-4 mt-10">
+          <motion.div
+            className="flex flex-col items-center"
+            initial={{ opacity: 0, scale: 0.5 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+            whileHover={{ scale: 1.2, rotate: 10 }}
+          >
+            <FaHome className="text-3xl text-white" />
+            <span className="text-3xl md:text-4xl font-bold text-white">
+              200+
+            </span>
+            <p className="text-sm md:text-base font-medium text-gray-200">
+              Projects
+            </p>
+          </motion.div>
 
-        <div className="space-x-6 mt-10">
-          <a
+          <motion.div
+            className="flex flex-col items-center"
+            initial={{ opacity: 0, scale: 0.5 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5, ease: "easeOut", delay: 0.2 }}
+            whileHover={{ scale: 1.2, rotate: 10 }}
+          >
+            <FaCity className="text-3xl text-white" />
+            <span className="text-3xl md:text-4xl font-bold text-white">
+              50+
+            </span>
+            <p className="text-sm md:text-base font-medium text-gray-200">
+              Cities Covered
+            </p>
+          </motion.div>
+
+          <motion.div
+            className="flex flex-col items-center"
+            initial={{ opacity: 0, scale: 0.5 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5, ease: "easeOut", delay: 0.4 }}
+            whileHover={{ scale: 1.2, rotate: 10 }}
+          >
+            <FaSmile className="text-3xl text-white" />
+            <span className="text-3xl md:text-4xl font-bold text-white">
+              10K+
+            </span>
+            <p className="text-sm md:text-base font-medium text-gray-200">
+              Happy Clients
+            </p>
+          </motion.div>
+        </div>
+
+        <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mt-8">
+          <motion.a
             href="#Projects"
-            className="inline-block px-8 py-3 rounded-full border border-white text-white font-medium transition duration-300 transform hover:bg-white hover:text-gray-800 hover:scale-105 shadow-lg hover:shadow-2xl"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            className="px-8 py-3 rounded-lg border border-transparent bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold shadow-md transition-all hover:shadow-lg hover:brightness-110"
           >
-            Projects
-          </a>
-          <a
+            Explore Projects
+          </motion.a>
+
+          <motion.a
             href="#Contact"
-            className="inline-block px-8 py-3 rounded-full bg-blue-800 text-white font-medium transition duration-300 transform hover:bg-blue-600 hover:scale-105 shadow-lg hover:shadow-2xl"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            className="px-8 py-3 rounded-lg border border-white text-white font-semibold bg-transparent shadow-md transition-all hover:bg-white hover:text-gray-800"
           >
-            Contact Us
-          </a>
+            Get in Touch
+          </motion.a>
         </div>
       </motion.div>
-    </div>
+    </header>
   );
 };
 

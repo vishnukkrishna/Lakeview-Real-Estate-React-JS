@@ -6,6 +6,7 @@ import star_icon from "./star_icon.svg";
 import left_arrow from "./left_arrow.svg";
 import right_arrow from "./right_arrow.svg";
 import header_img from "./header_img.jpg";
+import header_img_3 from "./header_img3.jpg";
 import brand_img from "./image.png";
 import project_img_1 from "./project_img_1.jpg";
 import project_img_2 from "./project_img_2.jpg";
@@ -24,6 +25,7 @@ export const assets = {
   menu_icon,
   star_icon,
   header_img,
+  header_img_3,
   brand_img,
   project_img_1,
   project_img_2,
