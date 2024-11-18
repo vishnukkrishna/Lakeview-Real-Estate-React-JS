@@ -26,7 +26,9 @@ const About = () => {
           src={assets.brand_img}
           className="w-full sm:w-1/2 max-w-lg"
           alt=""
+          style={{ filter: "drop-shadow(0px 0px 7px gray)" }}
         />
+
         <div className="flex flex-col items-center md:items-start mt-10 text-gray-600">
           <div className="grid grid-cols-2 gap-6 md:gap-10 w-full 2xl:pr-28 pl-7 md:pl-0">
             <div className="">

@@ -78,10 +78,16 @@ const Footer = () => {
             <a href="#" className="text-gray-400 hover:text-white">
               <i className="fab fa-twitter"></i>
             </a>
-            <a href="#" className="text-gray-400 hover:text-white">
+            <a
+              href="https://www.instagram.com/vishnu_k_krishna/"
+              className="text-gray-400 hover:text-white"
+            >
               <i className="fab fa-instagram"></i>
             </a>
-            <a href="#" className="text-gray-400 hover:text-white">
+            <a
+              href="https://www.linkedin.com/in/vishnukrishnakumar/"
+              className="text-gray-400 hover:text-white"
+            >
               <i className="fab fa-linkedin-in"></i>
             </a>
           </div>
