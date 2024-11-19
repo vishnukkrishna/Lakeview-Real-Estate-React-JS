@@ -9,7 +9,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Footer from "./components/Footer";
 import { motion, useScroll, useSpring } from "framer-motion";
-import BackToTopButton from "./components/BackToTopButton"; // Import the BackToTopButton
+import BackToTopButton from "./components/BackToTopButton";
 
 function App() {
   const { scrollYProgress } = useScroll();
@@ -35,7 +35,7 @@ function App() {
         <Contact />
         <Footer />
       </div>
-      <BackToTopButton /> {/* Add the Back to Top button here */}
+      <BackToTopButton />
     </>
   );
 }
