@@ -41,10 +41,38 @@ const Navbar = () => {
     }
   };
 
+  const variants = {
+    open: {
+      transition: { staggerChildren: 0.07, delayChildren: 0.2 },
+    },
+    closed: {
+      transition: { staggerChildren: 0.05, staggerDirection: -1 },
+    },
+  };
+
+  const menuItemVariants = {
+    open: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        y: { stiffness: 1000, velocity: -100 },
+      },
+    },
+    closed: {
+      y: 50,
+      opacity: 0,
+      transition: {
+        y: { stiffness: 1000 },
+      },
+    },
+  };
+
   return (
     <div
       className={`w-full fixed top-0 left-0 z-10 transition-all duration-300 ease-in-out ${
-        isScrolled ? "bg-gray-900 shadow-lg" : "bg-transparent"
+        isScrolled
+          ? "bg-gray-900 shadow-lg"
+          : "bg-gradient-to-b from-gray-700 to-transparent"
       }`}
     >
       <div className="container mx-auto flex justify-between items-center py-4 px-6 md:px-20 lg:px-32">
@@ -69,6 +97,7 @@ const Navbar = () => {
                 onClick={(e) => {
                   e.preventDefault();
                   scrollToSection(item);
+                  setShowMobileMenu(false);
                 }}
                 className="relative cursor-pointer hover:text-gray-400 transition-all"
               >
@@ -89,7 +118,7 @@ const Navbar = () => {
         <motion.img
           onClick={() => setShowMobileMenu(true)}
           src={assets.menu_icon}
-          className="md:hidden w-8 cursor-pointer"
+          className="md:hidden w-8 cursor-pointer rounded-lg"
           alt="Menu Icon"
           whileHover={{ scale: 1.1 }}
           transition={{ duration: 0.3 }}
@@ -117,7 +146,7 @@ const Navbar = () => {
           <motion.img
             onClick={() => setShowMobileMenu(false)}
             src={assets.cross_icon}
-            className="w-8 border-2 border-black rounded-full"
+            className="w-8 border-2 cursor-pointer border-black rounded-full"
             alt="Close Icon"
             whileHover={{ scale: 1.2, rotate: 360 }}
             transition={{ duration: 0.5 }}
@@ -127,13 +156,14 @@ const Navbar = () => {
         {/* Menu Items */}
         <motion.ul
           className="flex flex-col items-center gap-6 mt-10 text-lg font-medium"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: showMobileMenu ? 1 : 0 }}
-          transition={{ staggerChildren: 0.1, duration: 0.3 }}
+          variants={variants}
+          initial="closed"
+          animate={showMobileMenu ? "open" : "closed"}
         >
           {["Home", "About", "Projects", "Testimonials"].map((item, index) => (
             <motion.li
               key={index}
+              variants={menuItemVariants}
               className="group relative"
               whileHover={{ scale: 1.1 }}
               transition={{ duration: 0.3 }}
