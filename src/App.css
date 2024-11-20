@@ -1,0 +1,5 @@
+#custom-cursor {
+  pointer-events: none;
+  z-index: 9999;
+  transition: all 0.1s ease;
+}

@@ -84,7 +84,7 @@ const Navbar = () => {
           whileHover={{ scale: 1.1 }}
           transition={{ duration: 0.3 }}
         />
-        <ul className="hidden md:flex gap-7 text-white text-lg font-semibold relative">
+        <ul className="hidden md:flex gap-9 text-white text-lg font-semibold relative">
           {["Home", "About", "Projects", "Testimonials"].map((item, index) => (
             <motion.li
               key={index}
@@ -110,7 +110,7 @@ const Navbar = () => {
         <motion.button
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
-          className="hidden md:block px-6 py-2 sm:px-8 sm:py-3 md:px-8 md:py-2 rounded-lg border border-white text-white font-semibold bg-transparent shadow-md transition-all hover:bg-white hover:text-gray-800"
+          className="hidden md:block px-6 py-2 sm:px-8 sm:py-3 md:px-8 md:py-2 rounded-xl border border-white text-white font-semibold bg-transparent shadow-md transition-all hover:bg-white hover:text-gray-800"
         >
           Sign Up
         </motion.button>
@@ -186,7 +186,7 @@ const Navbar = () => {
 
         <div className="flex justify-center mt-6 mb-6">
           <motion.button
-            className="px-8 py-3 rounded-lg border text-white font-semibold bg-black hover:bg-gray-800 transition-all"
+            className="px-7 py-3 rounded-xl border text-white font-semibold bg-blue-800 hover:bg-gray-900 transition-all"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
           >

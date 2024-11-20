@@ -18,7 +18,6 @@ const Header = () => {
       {/* Navbar */}
       <Navbar />
 
-      {/* Header Content */}
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
@@ -88,7 +87,7 @@ const Header = () => {
             href="#Projects"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
-            className="px-8 py-3 rounded-lg border border-transparent bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold shadow-md transition-all hover:shadow-lg hover:brightness-110"
+            className="px-4 py-3 rounded-3xl border border-transparent bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold shadow-md transition-all hover:shadow-lg hover:brightness-110"
           >
             Explore Projects
           </motion.a>
@@ -97,7 +96,7 @@ const Header = () => {
             href="#Contact"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
-            className="px-8 py-3 rounded-lg border border-white text-white font-semibold bg-transparent shadow-md transition-all hover:bg-white hover:text-gray-800"
+            className="px-8 py-3 rounded-3xl border border-white text-white font-semibold bg-transparent shadow-md transition-all hover:bg-white hover:text-gray-800"
           >
             Get in Touch
           </motion.a>

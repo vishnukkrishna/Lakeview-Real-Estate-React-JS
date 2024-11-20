@@ -10,10 +10,10 @@ import "react-toastify/dist/ReactToastify.css";
 import Footer from "./components/Footer";
 import { motion, useScroll, useSpring } from "framer-motion";
 import BackToTopButton from "./components/BackToTopButton";
+import CustomCursor from "./components/CustomCursor";
 
 function App() {
   const { scrollYProgress } = useScroll();
-
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
     damping: 30,
@@ -36,6 +36,7 @@ function App() {
         <Footer />
       </div>
       <BackToTopButton />
+      <CustomCursor />
     </>
   );
 }
